@@ -37,8 +37,9 @@ RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/bin/ --fil
 # Install Laravel Envoy
 RUN composer global require "laravel/envoy"
 
-# Install PHP_CodeSniffer
-RUN composer global require "squizlabs/php_codesniffer=*"
+# Install PHP_CodeSniffer and PHP CS Fixer
+RUN composer global require "squizlabs/php_codesniffer"
+RUN composer global require "friendsofphp/php-cs-fixer"
 
 # Setup working directory
 WORKDIR /var/www
