@@ -11,7 +11,8 @@ RUN apk add --update \
     libxml2-dev \
     libzip-dev \
     bzip2-dev \
-    mysql-client
+    mysql-client \
+    openssl-client
 
 # Install php extensions
 RUN docker-php-ext-install \
